@@ -13,6 +13,6 @@ vol= spm_read_vols(hdr, cluster_mask);
 values=cluster_mask>0;
 
 
-cluster_acc=mean(vol(values),[1 2 3],'double','omitnan');
+cluster_acc=mean(vol(values),'double','omitnan');
 
 
