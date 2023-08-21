@@ -41,7 +41,7 @@ for p = 1:length(participant_numbers)
         figure;
         plot(data.(img1).PPI.ppi, data.(img2).PPI.ppi, 'k.');
         hold on
-        plot(data.(stim1).PPI.ppi, data.(stim2).PPI.ppi,'r.');
+        plot(data.(stim1).PPI.ppi, data.(stim2).PPI.ppi,'b.');
         
         % x and y axis has always the range of -1.5 to 1.5
         xlim([-1.5, 1.5]);
@@ -61,7 +61,7 @@ for p = 1:length(participant_numbers)
         y = data.(stim2).PPI.ppi(:);
         B = x\y;
         y1 = B(1)*x(:,1)+B(2);
-        plot(x(:,1), y1, 'r-');
+        plot(x(:,1), y1, 'b-');
 
         % Create legend and labels
         legend('Imaginary', 'Stimulus');
